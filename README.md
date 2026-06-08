@@ -49,9 +49,18 @@ Copia este repositorio en tu máquina local y crea tu archivo de configuración 
 ```hcl
 aws_access_key = "TU_AWS_ACCESS_KEY"
 aws_secret_key = "TU_AWS_SECRET_KEY"
-my_ip          = "TU_IP_PUBLICA_ACTUAL/32" # Ejemplo: 84.123.45.67/32
 aws_region     = "eu-west-3"               # Región opcional
 instance_type  = "t3.micro"                # Instancia FinOps
+
+```
+Descomenta en `user_data.sh` el modelo que quieras usar o añada usted otro.
+
+```bash
+# echo "=== Descargando el modelo rápido Qwen2.5 (0.5B) ==="
+# docker exec -i ollama ollama run qwen2.5:0.5b ""
+
+# echo "=== Descargando el modelo pesado Gemma (2B) ==="
+# docker exec -i ollama ollama run gemma:2b ""
 
 ```
 

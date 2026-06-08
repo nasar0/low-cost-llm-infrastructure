@@ -58,7 +58,7 @@ resource "aws_security_group" "ec2_sg" {
 
   # Permitir tráfico web (Open WebUI) desde cualquier lugar
   ingress {
-    description = "Acceso HTTP público"
+    description = "HTTP public access"
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
